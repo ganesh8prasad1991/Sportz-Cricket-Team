@@ -2,7 +2,7 @@
 //  Response.swift
 //  Sportz Cricket Team
 //
-//  Created by Ramniwas Patidar(Xebia) on 01/05/21.
+//  Created by Ganesh Prasad on 01/05/21.
 //  Copyright © 2021 Sportz Cricket Team. All rights reserved.
 //
 
@@ -28,13 +28,24 @@ struct Response {
                         let name = playerInfo?["Name_Full"] as? String ?? ""
                         let captainStatus = playerInfo?["Iscaptain"] as? Bool ?? false
                         let position = playerInfo?["Position"] as? String ?? "0"
-                        let player = Player(name: name, isCaptain: captainStatus, position: Int(position) ?? 0)
+                        let keeperStatus = playerInfo?["Iskeeper"] as? Bool ?? false
+                        
+                        let player = Player(
+                            name: name,
+                            isCaptain: captainStatus,
+                            isKeeper: keeperStatus,
+                            position: Int(position) ?? 0
+                        )
                         playersInfo.append(player)
                     }
                     
                     playersInfo.sort(by: { $0.position < $1.position })
                     
-                    teamsArray.append(Team(shortName: teamShortName, players: playersInfo))
+                    let team = Team(
+                        shortName: teamShortName,
+                        players: playersInfo
+                    )
+                    teamsArray.append(team)
                 }
             }
             
@@ -53,5 +64,23 @@ struct Team {
 struct Player {
     let name: String
     let isCaptain: Bool
+    let isKeeper: Bool
     let position: Int
+    
+    
+    var nameStatusWithCapAndKeeper: String {
+        var textToPrint = name
+        if isKeeper && isCaptain {
+            textToPrint.append(" (c & wk)")
+        }else if isCaptain {
+            textToPrint.append(" (c)")
+        }else if isKeeper {
+            textToPrint.append(" (wk)")
+        }
+        return textToPrint
+    }
+    
+    var positionStatus: String {
+        "Position (\(position))"
+    }
 }

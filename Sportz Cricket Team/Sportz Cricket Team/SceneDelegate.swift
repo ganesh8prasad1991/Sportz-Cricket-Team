@@ -2,7 +2,7 @@
 //  SceneDelegate.swift
 //  Sportz Cricket Team
 //
-//  Created by Ramniwas Patidar(Xebia) on 30/04/21.
+//  Created by Ganesh Prasad on 30/04/21.
 //  Copyright © 2021 Sportz Cricket Team. All rights reserved.
 //
 

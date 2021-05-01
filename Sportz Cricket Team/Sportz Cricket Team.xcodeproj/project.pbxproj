@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		D05EB2C0263D8E3E0035BCAC /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05EB2BF263D8E3E0035BCAC /* Response.swift */; };
+		D05EB2C3263D98AF0035BCAC /* CustomDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05EB2C2263D98AF0035BCAC /* CustomDataSource.swift */; };
 		D062A34A263C1C4E0058FA1A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D062A349263C1C4E0058FA1A /* AppDelegate.swift */; };
 		D062A34C263C1C4E0058FA1A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D062A34B263C1C4E0058FA1A /* SceneDelegate.swift */; };
 		D062A34E263C1C4E0058FA1A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D062A34D263C1C4E0058FA1A /* ViewController.swift */; };
@@ -19,6 +20,7 @@
 
 /* Begin PBXFileReference section */
 		D05EB2BF263D8E3E0035BCAC /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
+		D05EB2C2263D98AF0035BCAC /* CustomDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDataSource.swift; sourceTree = "<group>"; };
 		D062A346263C1C4E0058FA1A /* Sportz Cricket Team.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sportz Cricket Team.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D062A349263C1C4E0058FA1A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D062A34B263C1C4E0058FA1A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +51,30 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		D05EB2C1263D988D0035BCAC /* TableViewDataSource */ = {
+			isa = PBXGroup;
+			children = (
+				D05EB2C2263D98AF0035BCAC /* CustomDataSource.swift */,
+			);
+			path = TableViewDataSource;
+			sourceTree = "<group>";
+		};
+		D05EB2C4263DA4D90035BCAC /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				D062A34D263C1C4E0058FA1A /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		D05EB2C5263DA4E90035BCAC /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				D062A34F263C1C4E0058FA1A /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
 		D062A33D263C1C4E0058FA1A = {
 			isa = PBXGroup;
 			children = (
@@ -68,11 +94,12 @@
 		D062A348263C1C4E0058FA1A /* Sportz Cricket Team */ = {
 			isa = PBXGroup;
 			children = (
+				D05EB2C5263DA4E90035BCAC /* Storyboards */,
+				D05EB2C4263DA4D90035BCAC /* ViewControllers */,
+				D05EB2C1263D988D0035BCAC /* TableViewDataSource */,
 				D062A35D263C1E7A0058FA1A /* ApiClient */,
 				D062A349263C1C4E0058FA1A /* AppDelegate.swift */,
 				D062A34B263C1C4E0058FA1A /* SceneDelegate.swift */,
-				D062A34D263C1C4E0058FA1A /* ViewController.swift */,
-				D062A34F263C1C4E0058FA1A /* Main.storyboard */,
 				D062A352263C1C500058FA1A /* Assets.xcassets */,
 				D062A354263C1C500058FA1A /* LaunchScreen.storyboard */,
 				D062A357263C1C500058FA1A /* Info.plist */,
@@ -165,6 +192,7 @@
 				D062A34C263C1C4E0058FA1A /* SceneDelegate.swift in Sources */,
 				D062A35F263C1E8D0058FA1A /* ApiClient.swift in Sources */,
 				D05EB2C0263D8E3E0035BCAC /* Response.swift in Sources */,
+				D05EB2C3263D98AF0035BCAC /* CustomDataSource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

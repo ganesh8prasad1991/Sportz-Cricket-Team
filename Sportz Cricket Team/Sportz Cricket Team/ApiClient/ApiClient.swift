@@ -24,8 +24,8 @@ class ApiClent {
     
     private let urlSession = URLSession.shared
     
-    private let baseURL = URL(string: "https://cricket.yahoo.net/sifeeds/cricket/live/json/sapk01222019186652.json")!
 //    private let baseURL = URL(string: "https://cricket.yahoo.net/sifeeds/cricket/live/json/sapk01222019186652.json")!
+    private let baseURL = URL(string: "https://cricket.yahoo.net/sifeeds/cricket/live/json/sapk01222019186652.json")!
     
     
     func get(completion: @escaping (Result<Response, APIServiceError>) -> Void) {
@@ -57,7 +57,10 @@ class ApiClent {
     
 
 extension URLSession {
-    func dataTask(with url: URL, result: @escaping (Result<(URLResponse, Data), Error>) -> Void) -> URLSessionDataTask {
+    func dataTask(
+        with url: URL,
+        result: @escaping (Result<(URLResponse, Data), Error>) -> Void
+    ) -> URLSessionDataTask {
         return dataTask(with: url) { (data, response, error) in
             if let error = error {
                 result(.failure(error))

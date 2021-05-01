@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  Sportz Cricket Team
 //
-//  Created by Ramniwas Patidar(Xebia) on 30/04/21.
+//  Created by Ganesh Prasad on 30/04/21.
 //  Copyright © 2021 Sportz Cricket Team. All rights reserved.
 //
 
@@ -15,10 +15,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        
-        ApiClent.shared.get { (result) in
-            print(result)
-        }
         return true
     }
 
